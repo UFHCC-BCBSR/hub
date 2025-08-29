@@ -1,0 +1,8 @@
+go.sum
+.hugo_build.lock
+jsconfig.json
+/public/
+/resources/
+/node_modules/
+/docs/
+
