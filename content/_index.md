@@ -10,7 +10,7 @@ sections:
   - block: hero
     content:
       title: UF Health Cancer Center Bioinformatics Hub
-      text: Collaborative documentation for how to navigate bioinformatics with the UFHCC BCB-SR (and beyond!)
+      text: Dynamic documentation for how to navigate bioinformatics with the UFHCC BCB-SR (and beyond!)
       primary_action:
         text: Browse the hub
         url: /hub/docs/
