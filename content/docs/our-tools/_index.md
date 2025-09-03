@@ -15,18 +15,27 @@ This page links to documentation, usage guides, and public versions of our inter
 
 ---
 
-### Applications Developed by UFHCC BCB-SR
+# Applications
 
-- [Swamp-seq](/swampseq/) — Bulk RNA-seq QC and differential expression visualization  
-- [HeatPath](/heatpathapp/) — Generate pathway-based gene expression heatmaps from your own data  
+### Our Applications
+*Tools developed and maintained by the UFHCC BCB-SR team for reproducible omics data analysis*
 
-### Applications Hosted by UFHCC BCB-SR
-
-- [Icarus](/icarus/) — Single-cell data visualization and clustering  
-- [ExpressAnalyst](/expressanalyst/) — A local version of ExpressAnalyst for raw sequence data processing  
+- [DECODeR](/decoder/) — Differential Exploration of Counts-based Omics Data in R. Analysis and visualization of counts data derived from bulk RNA-seq or related assays
+- [HeatPath](/heatpathapp/) — Instantly generate gene expression heatmaps from your uploaded RNA-seq counts by searching pathway databases or uploading lists of pathways
+- [ClusterPicker](/clusterpicker/) — Interactively explore and extract gene clusters from heatmaps
+- [atacreportR](https://devufbcb-sr.rc.ufl.edu/atacreportr/) — Generate a comprehensive differential analysis and interactive report from the output of nf-core/atacseq. This is only available on the UF network. Contact our team for access
+- [rnareportR](/#) — Generate a comprehensive differential analysis and interactive report from the output of nf-core/rnaseq. This is only available on the UF network. Contact our team for access
+- [CloupeRator](/#) — Upload a processed Seurat object and download a .cloupe file that can then be imported into the 10X Loupe Browser v7.0 for data visualization and further exploration
 
 ### Project Management Tools
+*Internal tools for project tracking and workflow management*
 
-- [BCB-SR Project Tracker](/projecttracking/) — Internal project tracking dashboard  
-- [Care2 Inventory](/care2-inventory/) — CARE2 project metadata inventory  
+- [BCB-SR Project Tracker](/projecttracking/) — Internal project tracking dashboard
+- [Care2 Inventory](/care2-inventory/) — CARE2 project metadata inventory
+
+### Hosted Applications
+*External tools hosted locally for enhanced security and performance compared to public servers*
+
+- [Icarus](/icarus/) — Single-cell data visualization
+- [ExpressAnalyst](/expressanalyst/) — Gene expression analysis
 
