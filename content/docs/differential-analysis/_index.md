@@ -1,6 +1,6 @@
 ---
 title: "Omics Data Processing Pipelines"
-linkTitle: "Omics Data Processins Pipelines"
+linkTitle: "Omics Data Processing Pipelines"
 weight: 3
 summary: >
   
