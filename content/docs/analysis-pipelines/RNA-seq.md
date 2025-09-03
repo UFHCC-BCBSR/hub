@@ -1,23 +1,49 @@
 ---
 title: "RNA-seq"
 linkTitle: "RNA-seq"
-date: 
+date:
 summary: >
 weight: 1
 ---
 
-## Who We Are
+## Recommended Analysis Workflow
 
-- [Dr. Jason O. Brant, Unit Leader](https://directory.ufhealth.org/brant-jason/)
-- [Dr. Heather R. Kates, Bioinformatics Analyst III](https://directory.ufhealth.org/kates-heather/)
-- [Kalyanee Shirlekar, MS, Bioinformatics Analyst III](https://directory.ufhealth.org/shirlekar-kalyanee)
+### Primary Recommendation: nf-core/rnaseq + DECODeR
+For bulk RNA-seq projects, we recommend using [nf-core/rnaseq](https://nf-co.re/rnaseq) for initial processing followed by our [DECODeR](/decoder/) application for differential expression analysis and visualization.
 
+**Workflow Overview:**
+1. **Raw data processing** → Run [nf-core/rnaseq](https://nf-co.re/rnaseq) on HiperGator using SLURM configuration
+2. **Quality control & differential analysis** → Upload count matrices to [DECODeR](/decoder/) for comprehensive QC and differential expression analysis
+3. **Visualization & interpretation** → Explore results through DECODeR's interactive plots and downloadable reports
 
-## Why UF Health Cancer Center BCB-SR?
+### Alternative R-based Analysis
+For users preferring traditional R workflows, we recommend:
+- [limma-voom](https://ucdavis-bioinformatics-training.github.io/2018-June-RNA-Seq-Workshop/thursday/DE.html) for differential expression
+- [ComplexHeatmap](https://bioconductor.org/packages/release/bioc/html/ComplexHeatmap.html) for visualization
+- Access via [RStudio Server on HiperGator](https://docs.rc.ufl.edu/software/apps/r/rstudio_server/)
+- 
+## Best Practices & Considerations
 
-Each of us at BCB-SR Bioinformatics is driven by the mission to bridge the gap between data and discovery. We are all trained as biologists as well as bioinformaticians, and take a biology-first view of bioinformatics analysis.
+**Experimental Design:**
+- Plan for adequate biological replicates (minimum 3 per condition)
+- Consider batch effects and confounding variables
+- Include appropriate controls for your experimental questions
 
-## Careers
+**Data Quality:**
+- Evaluate read quality and mapping rates from nf-core/rnaseq output
+- Check for outlier samples using DECODeR's QC metrics
+- Assess count distribution and normalization effectiveness
 
-Want to work as a bioformatician at UF? We'd love to hear from you to support your career development. You can search for jobs at [Careers at UF](https://explore.jobs.ufl.edu/en-us/listing/) using broad search terms including "data" and "analyst", as not all programs realize that what they are looking for is a *bioinformatician*!
+**Statistical Analysis:**
+- Set appropriate significance thresholds (FDR < 0.05, |log2FC| > 1)
+- Consider multiple testing correction methods
+- Validate key findings with qPCR when possible
+
+**Computational Resources:**
+- Use HiperGator's SLURM scheduler for nf-core/rnaseq processing
+- Scale resources based on sample count and read depth
+- Plan storage needs for large fastq files and intermediate outputs
+
+## Getting Started
+Submit a [support request](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/) to discuss your RNA-seq project design and analysis needs.
 
