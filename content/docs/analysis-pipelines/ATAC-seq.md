@@ -1,21 +1,53 @@
 ---
 title: "ATAC-seq"
 linkTitle: "ATAC-seq"
-date: 
+date:
 summary: >
 weight: 2
 ---
 
-## Submit a Support Request Form
+## Recommended Analysis Workflow
 
-- [Online Support Requet Form](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/):
+### Primary Recommendation: nf-core/atacseq + atacreportR
+For ATAC-seq projects, we recommend using [nf-core/atacseq](https://nf-co.re/atacseq) for initial processing followed by our [atacreportR](https://devufbcb-sr.rc.ufl.edu/atacreportr/) application for differential accessibility analysis and comprehensive reporting.
 
-Fill out the support request form as best you can. The important thing is to get connected with us, we'll learn much more about your project later.
+**Workflow Overview:**
+1. **Raw data processing** → Run [nf-core/atacseq](https://nf-co.re/atacseq) on HiperGator using SLURM configuration
+2. **Differential analysis & reporting** → Use [atacreportR](https://devufbcb-sr.rc.ufl.edu/atacreportr/) to generate comprehensive differential accessibility reports
+3. **Interactive exploration** → Review results through atacreportR's downloadable reports
 
-## Schedule a Meeting With Us
+**Important Access Notes:**
+- atacreportR is a **private application** accessible only on the UF network
+- Contact our team for access to the required HiperGator data location to run the application
+- VPN connection required for off-campus access
 
-Once we receive your support request, we'll send you an email to schedule a meeting. Initial meetings are usually about an hour long, during which we want to understand your project and the expectations of a future collaboration.
+### Alternative R-based Analysis
+For users preferring traditional R workflows, we recommend:
+- [DiffBind](https://bioconductor.org/packages/release/bioc/html/DiffBind.html) for differential binding analysis
+- [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) for peak annotation
+- Access via [RStudio Server on HiperGator](https://docs.rc.ufl.edu/software/apps/r/rstudio_server/)
 
-## How Does the Funding Work?
+## Best Practices & Considerations
 
-The BCB-SR is a group of bioinformatics scientists whose salaries are primarily funded by effort on the grants on which they collaborate. Because of this, the ideal scenario is that you identify the need for bioinformatics collaboration **before** your grant is submitted so that there will be an appropriate allocation of funding. If this is not the case, we will estimate our effort given the project's needs and determine whether the project has sufficient funding available to support bioinformatics collaboration.
+**Experimental Design:**
+- Plan for adequate biological replicates (minimum 3 per condition)
+- Include appropriate input/background controls
+- Consider cell type purity and sample quality
+
+**Data Quality:**
+- Evaluate fragment size distribution and TSS enrichment from nf-core/atacseq output
+- Check for proper peak calling and reproducibility between replicates
+- Assess library complexity and duplication rates
+
+**Analysis Strategy:**
+- Define appropriate peak calling parameters for your cell type
+- Consider motif enrichment analysis for biological interpretation
+- Plan integration with RNA-seq data when available
+
+**Computational Resources:**
+- Use HiperGator's SLURM scheduler for nf-core/atacseq processing
+- Allocate sufficient memory for peak calling (depends on genome size)
+- Plan storage for large BAM files and peak call outputs
+
+## Getting Started
+Submit a [support request](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/) to discuss your ATAC-seq project design, analysis needs, and to obtain access to atacreportR.
