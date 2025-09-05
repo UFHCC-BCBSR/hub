@@ -1,21 +1,22 @@
----
-title: "ATAC-seq"
-linkTitle: "ATAC-seq"
-date: 
-summary: >
-weight: 2
----
+## Experimental Design Considerations
 
-## Submit a Support Request Form
+### Replication Strategy
+Plan for at least 3-4 biological replicates per condition. ATAC-seq can show high variability between samples, making adequate replication crucial for detecting reproducible accessible chromatin regions and statistical power in downstream analysis.
 
-- [Online Support Requet Form](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/):
+### Quality Control Before Sequencing
+- **Cell viability**: Ensure >90% viability before nuclei isolation
+- **Nuclei integrity**: Check for intact nuclei without cytoplasmic contamination
+- **Library complexity**: Assess fragment size distribution on Bioanalyzer - expect nucleosome laddering pattern
+- **Enrichment validation**: Verify enrichment at known accessible regions (e.g., TSS) using qPCR
 
-Fill out the support request form as best you can. The important thing is to get connected with us, we'll learn much more about your project later.
+### Spike-in Normalization
+Consider spike-in controls when comparing samples with potentially different numbers of accessible sites (e.g., developmental stages, drug treatments). Drosophila chromatin or synthetic DNA standards can help normalize for technical variation and enable quantitative comparisons across conditions.
 
-## Schedule a Meeting With Us
+### Sequencing Depth
+Target 25-50 million paired-end reads per sample for mammalian genomes. Higher depth may be needed for detecting condition-specific peaks or working with limited cell numbers.
 
-Once we receive your support request, we'll send you an email to schedule a meeting. Initial meetings are usually about an hour long, during which we want to understand your project and the expectations of a future collaboration.
+### ENCODE Guidelines
+Follow the [ENCODE ATAC-seq pipeline](https://www.encodeproject.org/atac-seq/) for standardized data processing and quality metrics. Key benchmarks include TSS enrichment >7, fraction of reads in peaks >0.3, and library complexity measures.
 
-## How Does the Funding Work?
-
-The BCB-SR is a group of bioinformatics scientists whose salaries are primarily funded by effort on the grants on which they collaborate. Because of this, the ideal scenario is that you identify the need for bioinformatics collaboration **before** your grant is submitted so that there will be an appropriate allocation of funding. If this is not the case, we will estimate our effort given the project's needs and determine whether the project has sufficient funding available to support bioinformatics collaboration.
+## Data Processing Workflow
+[Link to your analysis pipeline documentation]
