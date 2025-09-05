@@ -1,21 +1,42 @@
 ---
 title: "scRNA-seq"
 linkTitle: "scRNA-seq"
-date: 
+date:
 summary: >
 weight: 3
 ---
 
-## Submit a Support Request Form
+## Experimental Design Considerations
 
-- [Online Support Requet Form](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/):
+*Note: This section covers standard droplet-based single-cell RNA-seq protocols. For spatial transcriptomics approaches, see [Spatial RNA-seq](../spatial-rna-seq/) and [10X Visium](../visium/).*
 
-Fill out the support request form as best you can. The important thing is to get connected with us, we'll learn much more about your project later.
+### Replication Strategy
+Plan for at least 2-3 biological replicates per condition when possible. Balance sample size with cell number - fewer samples with more cells per sample may be preferable for rare cell type detection, while more samples with fewer cells provide better population-level inference.
 
-## Schedule a Meeting With Us
+### Sample Preparation
+- **Cell viability**: Maintain >80% viability throughout processing. Dead cells can create ambient RNA contamination
+- **Single-cell suspension**: Ensure complete dissociation without excessive stress. Optimize dissociation protocols for your tissue type
+- **Processing time**: Minimize time from dissociation to capture (<30 minutes) to reduce stress-induced gene expression changes
+- **Cell concentration**: Target 700-1,200 cells/μL for optimal capture efficiency
 
-Once we receive your support request, we'll send you an email to schedule a meeting. Initial meetings are usually about an hour long, during which we want to understand your project and the expectations of a future collaboration.
+### Platform Considerations
+- **10X Genomics**: Most common platform, good for large cell numbers (500-10,000 cells)
+- **Smart-seq protocols**: Better gene coverage per cell, suitable for smaller cell numbers with deeper profiling
+- **Cell capture targets**: Plan for 3,000-10,000 cells per sample, accounting for ~65% capture efficiency
 
-## How Does the Funding Work?
+### Quality Control Expectations
+- **Genes per cell**: Expect 1,000-4,000 detected genes per cell for mammalian samples
+- **UMI counts**: Target 1,000-10,000 UMIs per cell depending on cell type and platform
+- **Mitochondrial gene expression**: <20% for healthy cells (higher may indicate cell stress/death)
+- **Doublet rates**: Expect 0.4-1.6% per 1,000 cells captured
 
-The BCB-SR is a group of bioinformatics scientists whose salaries are primarily funded by effort on the grants on which they collaborate. Because of this, the ideal scenario is that you identify the need for bioinformatics collaboration **before** your grant is submitted so that there will be an appropriate allocation of funding. If this is not the case, we will estimate our effort given the project's needs and determine whether the project has sufficient funding available to support bioinformatics collaboration.
+### Batch Effects and Experimental Design
+- **Multiplexing**: Consider cell hashing or genetic multiplexing to reduce batch effects
+- **Processing batches**: Balance conditions across processing days when multiple batches are necessary
+- **Ambient RNA**: Account for background contamination, especially important for tissue samples
+
+### ENCODE Guidelines
+While ENCODE standards for bulk RNA-seq provide general guidance, single-cell specific considerations include the [Human Cell Atlas guidelines](https://www.humancellatlas.org/) for standardized sample processing and metadata collection.
+
+## Data Processing Workflow
+[Link to your analysis pipeline documentation]
