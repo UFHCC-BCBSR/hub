@@ -1,11 +1,15 @@
 ---
-title: "Differential Analysis of Omics Data"
-linkTitle: "Differential Analysis of Omics Data"
+title: "Analysis of Omics Data by Assay"
+linkTitle: "Analysis of Omics Data by Assay"
 weight: 4
 summary: >
   
 ---
  
-Biologists are well-versed in the principles of sound experimental design, but applying these standards to omics assays — or any project generating high-dimensional data — can be less familiar. Yet rigorous design is just as essential in these contexts. Below, you'll find key guidelines for specific assay types, along with peer-reviewed publications that highlight the importance of thoughtful planning before you begin your project.
+This collection provides suggested workflows, recommended tools, and best practices for analyzing omics data across different experimental platforms. Starting with assembly and quantification pipelines, we document the essential steps of data processing and how these tie into downstream statistical analysis and biological interpretation. These guides help us navigate from raw data to biological insights using established computational approaches.
+
+The following pages are organized by specific assay types, covering the unique analytical considerations and specialized tools required for each platform's data characteristics and experimental goals.
+
+For more guidance on downstream analysis steps, see our dedicated sections on [Differential Analysis of Omics Data](link), [Biological Interpretation of Results](link), and [Data Visualization](link).
 
 {{< list_children >}}
