@@ -4,13 +4,111 @@ linkTitle: "Git - Collaboration"
 summary: " "
 ---
 
+Portions adapted from the Weecology Wiki by Weecology, used under CC BY 4.0.
+
 ## Intro
-This is intended to be a default set of procedures for Weecologists to collaborate together using a Git/GitHub repository. For projects that are primarily being worked on by one person, this is probably unnecessary, but you may want to follow this anyway, so as to ingrain the workflow practices.
+This guide provides a simple, consistent way for UFHCC BCB-SR bioinformaticians to collaborate on code and analysis projects using Git and GitHub.  
+
+Even if you’re working alone, Git and GitHub are valuable. Git helps you keep a full history of your changes (so you can always go back if something breaks), while GitHub makes your code easy to share with colleagues or collaborators—whether that means fully collaborating on the same project or just saying *“here’s what I did.”*  
+
+If you’re new to Git, don’t worry—it’s less complicated than it looks. Think of GitHub as the "source of truth" where your code lives, and Git as the tool that lets you make safe changes, track history, and share updates. Most of the time, you’ll only use a handful of commands, and the workflow is the same whether you’re on your laptop or working on HiPerGator.  
+
+Whether you’re starting fresh or uploading existing code, the steps below will get you set up quickly. Once you’re using GitHub, you’ll gain version control, reproducibility, and the ability to share your work in a professional, reliable way.  
+
+---
+
+## FAQs / Why use Git and GitHub?
+
+**Q: What’s the difference between Git and GitHub?**  
+- *Git* is the tool that runs locally on your computer. It tracks changes to your files, lets you roll back mistakes, and creates a history of your work.  
+- *GitHub* is a website where those Git-tracked projects can be stored and shared. Think of GitHub as the central “source of truth” that multiple people (or multiple computers) can connect to.  
+
+**Q: Why use Git if I’m not collaborating?**  
+- Version control: always know what changed, when, and why.  
+- Backup: your work is safe on GitHub, even if your laptop fails.  
+- Reproducibility: you (or anyone else) can re-run your exact workflow later.  
+- Sharing: even if you’re not working with others, you can easily show someone your code, or make it available for a paper or report.  
+
+**Q: Why use GitHub if I already have my code on HiPerGator or Dropbox?**  
+- GitHub adds structure and history that plain file storage does not.  
+- Everyone sees the same version (“the source of truth”), instead of trading files like `analysis_final_v2_reallyfinal.R`.  
+- GitHub integrates directly with tools for code review, collaboration, and even automated testing.  
+
+**Q: What if I make a mistake?**  
+- Git keeps the entire history, so you can roll back to a safe state. Mistakes are expected—it’s part of the workflow!  
+
+**Q: Is this complicated?**  
+- Not really. Most people only use a small set of Git commands: `clone`, `pull`, `add`, `commit`, `push`. Once you’ve run them a few times, it becomes routine.  
+
+---
 
 ## Setup
-*If you haven't done so already, please check out the onboarding [section with links to Git and Github resources](/docs/getting-started/new-member-onboarding/#git-and-github).*
+### 1. Create a GitHub account
+- Go to [GitHub.com](https://github.com) and sign up.  
+- Use your UF or professional email if possible—it makes collaboration easier.  
 
-In this guide, we presume that there is a single repo on GitHub and multiple users, who work on clones of that repo (on their local machines), and interface through GitHub.
+### 2. Install Git locally
+- Git is usually pre-installed on Linux (including Hipergator) and macOS.  
+- On Windows, you need to install it from [git-scm.com](https://git-scm.com).  
+- You can check by running:  
+  \`\`\`bash
+  git --version
+  \`\`\`
+
+### 3. Connect Git with GitHub (optional)
+Run these commands once (replace with your name/email):
+\`\`\`bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@ufl.edu"
+\`\`\`
+This ensures commits are linked to you on GitHub.
+
+### 4. Get access to the repository
+- If you’re starting a **new project**, create a repository on GitHub (choose a clear name, add a short description, and decide if it should be public or private).  
+- If you’re contributing to an **existing project**, ask to be added as a collaborator.  
+
+---
+
+### If you are starting a new project
+1. Create a repository on GitHub.  
+   - Include a README.md so the project has a landing page.  (You can do this on Github.com or later in your local directory)
+   - Consider adding a .gitignore to exclude files you don’t want tracked (e.g., large files, unpublished data, log files, temporary outputs). (You can do this on Github.com or later in your local directory)
+     
+2. Clone it to your local environment:  
+   \`\`\`bash
+   git clone https://github.com/YourOrg/your-repo.git
+   \`\`\`
+   You can clone it to your laptop, HiPerGator, or both. Just remember: GitHub (the remote repo) is the "source of truth."  
+
+---
+
+### If you already have a project you want to put on GitHub
+1. Create a new repository on GitHub.  
+2. From your local code directory:  
+   \`\`\`bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YourOrg/your-repo.git
+   git push -u origin main
+   \`\`\`
+3. Your code is now on GitHub and ready for collaboration or linking to in a Data and Code Availability Statement.
+
+### Work on your code
+
+Once your repository is set up, the basic workflow for making changes looks like this:
+
+1. Edit your files (R scripts, notebooks, code, etc.) locally.
+2. Stage the changes so Git knows what to include:
+   git add .
+   (the "." means “add everything that changed in this folder” — you can also specify a file name instead.)
+3. Commit the changes with a message describing what you did:
+   git commit -m "short but descriptive message"
+4. Push the changes to GitHub so they are shared with others (and backed up):
+   git push
+
+That’s it — edit → add → commit → push. This is the cycle you’ll use most often when working with Git.
 
 ## Branching
 
