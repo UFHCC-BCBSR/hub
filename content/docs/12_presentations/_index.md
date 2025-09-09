@@ -3,7 +3,7 @@ title: "Presentations"
 linkTitle: "Presentations"
 date:
 summary: >
-weight: 1
+weight: 12
 ---
 
 ## Presentations and Demos

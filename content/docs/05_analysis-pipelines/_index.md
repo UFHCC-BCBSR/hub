@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Omics Data by Assay"
 linkTitle: "Analysis of Omics Data by Assay"
-weight: 1
+weight: 5
 summary: >
   
 ---

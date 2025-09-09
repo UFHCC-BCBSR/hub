@@ -1,7 +1,7 @@
 ---
 title: "Data Sharing and Transfer"
 linkTitle: "Data Sharing and Transfer"
-weight: 1
+weight: 8
 summary: >
   Tools and methods for transferring, sharing, and managing research data
 ---

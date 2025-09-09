@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics Blog Posts, Papers, and News"
-weight: 1
+weight: 14
 summary: >
   How to navigate the academic publishing process.
 ---

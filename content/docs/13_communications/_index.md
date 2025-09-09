@@ -1,6 +1,6 @@
 ---
 title: "Subscribe to Bioinformatics Updates"
-weight: 1
+weight: 13
 summary: >
   How to stay up to date on news and events with UFHCC BCB-SR Bioinformatics.
 ---
