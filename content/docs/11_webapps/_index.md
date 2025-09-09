@@ -1,7 +1,7 @@
 ---
 title: "Web Applications for Omics Analysis"
 linkTitle: "Web Applications"
-weight: 5
+weight: 1
 summary: >
   Curated collection of web-based tools for omics data analysis and visualization
 ---

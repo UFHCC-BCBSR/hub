@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization"
 linkTitle: "Data Visualization"
-weight: 6
+weight: 1
 summary: >
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Publishing Bioinformatics Methods"
-weight: 6
+weight: 1
 summary: >
   How to navigate the academic publishing process.
 ---

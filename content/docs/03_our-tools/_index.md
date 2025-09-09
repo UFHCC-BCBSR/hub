@@ -4,7 +4,7 @@ linkTitle: "UFHCC BCB-SR In-House Tools"
 date: 
 summary: >
   Tools developed or hosted by the UF Health Cancer Center Bioinformatics team for data analysis, reporting, and visualization.
-weight: 2
+weight: 1
 ---
 
 The UF Health Cancer Center Bioinformatics team develops and maintains a growing set of in-house tools designed to support clinical, translational, and basic science research. These tools help streamline data analysis, automate reporting, and enhance reproducibility across omics workflows.

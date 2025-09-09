@@ -1,6 +1,6 @@
 ---
 title: "Computing Guides and Tips"
-weight: 7
+weight: 1
 summary: >
   Advice and guidelines for programming, computers, and computational tools 
 ---
