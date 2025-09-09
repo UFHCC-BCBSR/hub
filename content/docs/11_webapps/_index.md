@@ -10,6 +10,10 @@ This collection highlights web-based applications that complement command-line w
 
 Web applications offer several advantages: no installation requirements, regular updates by developers, and often integrate multiple analysis steps into streamlined workflows. They're ideal for pilot studies, method comparison, and sharing results with collaborators who may not have computational expertise.
 
+**However, web applications have significant limitations that researchers should consider:** poor or unclear documentation of methods and usage, infrequent updates that leave tools outdated, limited reproducibility compared to command-line approaches, and often slow performance with large datasets. Additionally, many web tools lack version control, making it difficult to recreate analyses months or years later.
+
+Given these trade-offs, we have curated a select few web applications that we've found to be well-maintained, documented, and useful for specific tasks. For critical analyses or publication-quality work, we recommend complementing web applications with reproducible command-line workflows.
+
 The following categories organize web applications by their scope and intended use:
 
 ## [Integrated Analysis Platforms](integrated-platforms/)
